@@ -45,12 +45,21 @@
         flex-wrap: wrap;
         justify-content: space-around;
     }
+    .main {
+        justify-content: flex-start;
+        height: fit-content;
+    }
 }
 
-@media(max-width: 576px) {
+@media(max-width: 799px) {
     .container {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .main {
+        justify-content: flex-start;
+        height: fit-content;
     }
 
 }

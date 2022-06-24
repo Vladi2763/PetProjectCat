@@ -38,8 +38,7 @@ const Card: React.FC<{ taste: string; weight: string; text: string; link: string
                 onMouseLeave={leaveCardHandler}
                 onMouseEnter={enterCardHandler}>
                 <div className={classes.spanContainer}>
-                    {!isSelectedLeave && <span className={classes.title}>Сказочное заморское яство</span>}
-                    {isSelectedLeave && <span className={classes.textSelectedLeave}>Котэ не одобряет?</span>}
+                    <span className={!isSelectedLeave ? classes.title :classes.textSelectedLeave}>{isSelectedLeave ? 'Котэ не одобряет?' :'Сказочное заморское яство' }</span>
                     <span className={classes.tit}>Нямушка</span>
                     <span className={classes.taste}>{props.taste}</span>
                     <span className={classes.description}>{props.quantity} порций<br></br>{props.present}</span>
